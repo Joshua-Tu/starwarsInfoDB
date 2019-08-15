@@ -45,7 +45,7 @@
     </div>
 
 
-    <div>
+    {{-- <div>
       <br />
       <h2 class="ui red dividing huge header">Planets:</h2>
       <br/>
@@ -88,10 +88,10 @@
               </span>
             </div>
           @endforeach  
-    </div>
+    </div> --}}
 
 
-    <div>
+    {{-- <div>
         <br/>
         <h2 class="ui red dividing huge header">Starships:</h2>
         <br/>
@@ -111,9 +111,6 @@
                     <div class="ui yellow tiny header">Hyperdrive Rating: {{$starship['hyperdrive_rating']}}</div>
                     <div class="ui yellow tiny header">MGLT: {{$starship['MGLT']}}</div>
                     <div class="ui yellow tiny header">Starship Class: {{$starship['starship_class']}}</div>
-
-                    {{-- pilots could be [], which will make laravel throw an error, also there are ulrs in some of them, better comment them out --}}
-                    {{-- <div class="ui yellow tiny header">Pilots: {{$starship['pilots']}}</div> --}}
                 </span>
               </div>
             @endforeach  
@@ -137,13 +134,10 @@
                       <div class="ui yellow tiny header">Cargo Capacity: {{$vehicle['cargo_capacity']}}</div>
                       <div class="ui yellow tiny header">Consumables: {{$vehicle['consumables']}}</div>
                       <div class="ui yellow tiny header">Vehicle Class: {{$vehicle['vehicle_class']}}</div>
-                      
-                      {{-- pilots could be [], which will make laravel throw an error, also there are ulrs in some of them, better comment them out --}}
-                      {{-- <div class="ui yellow tiny header">Pilots: {{$vehicle['pilots']}}</div>     --}}
                   </span>
                 </div>
               @endforeach  
-        </div>
+        </div> --}}
 @endsection   {{-- @endsection means @stop  --}} 
 
 
