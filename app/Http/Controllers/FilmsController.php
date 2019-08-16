@@ -14,16 +14,6 @@ class FilmsController extends Controller
 
     public function __construct() {
 
-        ////if the there's no content in the films table, then fetch films, characters array data from SW api
-          
-          $this->films = array_values(array_sort(GetSingleTypeData::get('films'), function ($value) {
-            return $value['episode_id']; //sort by episode_id
-          }));
-
-          
-          // $this->characters = array_values(array_sort(GetSingleTypeData::get('people'), function ($value) {
-          //   return $value['name']; //sorted by name
-          // }));
 
           // $this->planets = array_values(array_sort(GetSingleTypeData::get('planets'), function ($value) {
           //   return $value['name'];
@@ -42,9 +32,46 @@ class FilmsController extends Controller
           // }));
     }
 
+    public function getFilms() {
+      $films = array_values(array_sort(GetSingleTypeData::get('films'), function ($value) {
+        return $value['episode_id']; //sort by episode_id
+      }));
 
-    public function index()
-    {           
+      foreach($films as $film) {
+        Film::create([
+          'episode_id' => $film['episode_id'],
+          'film_url' => $film['url'],
+          'title' => $film['title'],
+          'director' => $film['director'],
+          'producer' => $film['producer'],
+          'release_date' => $film['release_date'],
+          'opening_crawl' => $film['opening_crawl']
+        ]);
+      }
+    }
+
+    public function getCharacters() {
+      $characters = array_values(array_sort(GetSingleTypeData::get('people'), function ($value) {
+        return $value['name']; //sorted by name
+      }));
+
+      foreach($characters as $character) {
+        Character::create([
+          'character_url' => $character['url'],
+          'name' => $character['name'],
+          'gender' => $character['gender'],
+          'birth_year' => $character['birth_year'],
+          'eye_color' => $character['eye_color'],
+          'hair_color' => $character['hair_color'],
+          'skin_color' => $character['skin_color'],
+          'height' => $character['height'],
+          'mass' => $character['mass']
+        ]);
+      }
+      
+    }
+
+    public function index() {           
         $films =  $this->films;
         
         return view('pages.homepage',compact('orderedFilmsArr'));
@@ -52,8 +79,7 @@ class FilmsController extends Controller
     }
 
 
-    public function show($id)
-    {   
+    public function show($id) {   
         $orderedFilmsArr =  $this->films;
         $filmEpiIdArr = array_column($orderedFilmsArr,'episode_id');
         if(in_array($id, $filmEpiIdArr)){
