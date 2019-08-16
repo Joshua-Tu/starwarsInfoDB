@@ -8,12 +8,6 @@
 
 
 @section('searchBar')
-{{-- <form method="GET" action="/" onkeydown="this.submit();"> --}}
-    {{-- <label>Search:
-        <input type='search' name="search" placeholder="by title" /> 
-    </label> --}}
-    {{-- <button type="submit">Search</button> --}}
-{{-- </form> --}}  
     <div class="ui category search">
         <div class="ui icon input">
                 <input id="searchInput" class="prompt" type="text" placeholder="Search movies" onKeyUp="handleSearch()">
@@ -26,24 +20,24 @@
 
 @section('content')
     <ul id="search-field">
-        @foreach($orderedFilmsArr as $filmData)
-            <li class="ui container filmItem" id="{{$filmData['episode_id']}}">
+        @foreach($films as $film)
+            <li class="ui container filmItem" id="{{$film['episode_id']}}">
                  <br />
-                 <h3 class="ui dividing violet large header">{{$filmData['title']}}</h3>
-                 <div class="alert-box favoed {{$filmData['title']}}">You favourited this film, this film will go to the top !!!</div>
-                 <div class="alert-box unfavoed {{$filmData['title']}}">You unfavourited this film, this film will go to the bottom !!!</div>
-                 <h2 class="ui brown medium header">Director: {{$filmData['director']}}</h2>
-                 <h2 class="ui brown medium header">Episode: {{$filmData['episode_id']}}</h2>
-                 <h2 class="ui brown medium header">Release Date: {{$filmData['release_date']}}</h2>
+                 <h3 class="ui dividing violet large header">{{$film['title']}}</h3>
+                 <div class="alert-box favoed {{$film['title']}}">You favourited this film, this film will go to the top !!!</div>
+                 <div class="alert-box unfavoed {{$film['title']}}">You unfavourited this film, this film will go to the bottom !!!</div>
+                 <h2 class="ui brown medium header">Director: {{$film['director']}}</h2>
+                 <h2 class="ui brown medium header">Episode: {{$film['episode_id']}}</h2>
+                 <h2 class="ui brown medium header">Release Date: {{$film['release_date']}}</h2>
 
                  <label >
                      <h4 class="ui medium red header">Favourite
-                     <input type="checkbox" id="{{$filmData['title']}}" class="checkbox" onClick="handleFavo(this.id, {{$filmData['episode_id']}})" />
+                     <input type="checkbox" id="{{$film['title']}}" class="checkbox" onClick="handleFavo(this.id, {{$film['episode_id']}})" />
                      </h4>
                  </label>
 
                  <button class="ui orange basic button">
-                     <a href="/film/{{$filmData['episode_id']}}">details</a>
+                     <a href="/film/{{$film['episode_id']}}">details</a>
                  </button>
              </li>
         @endforeach  
