@@ -25,7 +25,7 @@ class CreateSpeciesTable extends Migration
             $table->string('hair_colors');
             $table->string('skin_colors');
             $table->string('language');
-            $table->string('homeworld');
+            $table->string('homeworld')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

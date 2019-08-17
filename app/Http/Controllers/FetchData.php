@@ -18,8 +18,6 @@ class FetchData extends Controller {
         return $value['episode_id']; //sort by episode_id
       }));
 
-      dd(array_column($films, 'characters'));
-
       foreach($films as $film) {
         Film::create([
           'episode_id' => $film['episode_id'],
@@ -30,6 +28,7 @@ class FetchData extends Controller {
           'release_date' => $film['release_date'],
           'opening_crawl' => $film['opening_crawl']
         ]);
+        Film::find((int) $film['episode_id'])->characters()->sync($film['characters']);
       }
     }
 

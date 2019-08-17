@@ -20,4 +20,8 @@ class Film extends Model
     ];
 
     protected $dates = ['deleted_at'];
+
+    public function characters() {
+        return $this->belongsToMany('App\Character', 'character_film', 'film_id','character_url');
+    }
 }

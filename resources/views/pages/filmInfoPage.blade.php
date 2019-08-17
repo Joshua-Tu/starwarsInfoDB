@@ -2,11 +2,11 @@
 
 
 @section('header')
-  <h1 class="ui dividing blue huge header">{{$filmData['title']}}</h1>
-  <h2 class="ui blue medium header">Episode: {{$filmData['episode_id']}} </h2>
-  <h2 class="ui blue medium header">Director: {{$filmData['director']}}</h2>
-  <h2 class="ui blue medium header">Producer:  {{$filmData['producer']}}</h2>
-  <h2 class="ui blue medium header">Release date: {{$filmData['release_date']}}</h2>
+  <h1 class="ui dividing blue huge header">{{$film->title}}</h1>
+  <h2 class="ui blue medium header">Episode: {{$film->episode_id}} </h2>
+  <h2 class="ui blue medium header">Director: {{$film->director}}</h2>
+  <h2 class="ui blue medium header">Producer:  {{$film->producer}}</h2>
+  <h2 class="ui blue medium header">Release date: {{$film->release_date}}</h2>
 @stop
 
 
@@ -21,24 +21,24 @@
 
 @section('content')
   <div class="ui red dividing huge header">Opening Crawl: 
-    <h3 class="ui violet small header">{{$filmData['opening_crawl']}}<h3>
+    <h3 class="ui violet small header">{{$film->opening_crawl}}<h3>
   </div>
 
     <div>
       <br/>
       <h2 class="ui red dividing huge header">Characters:</h2>
       <br/>
-          @foreach($charactersArr as $character)
+          @foreach($characters as $character)
           <div class="ui container tooltip">
-            <h2 class="ui violet medium header">{{$character['name']}}</h2>
+            <h2 class="ui violet medium header">{{$character->name}}</h2>
             <span class="tooltiptext"> 
-                <div class="ui yellow tiny header">Height: {{$character['height']}}</div>
-                <div class="ui yellow tiny header">Mass: {{$character['mass']}}</div>
-                <div class="ui yellow tiny header">Hair Color: {{$character['hair_color']}}</div>
-                <div class="ui yellow tiny header">Skin Color: {{$character['skin_color']}}</div>
-                <div class="ui yellow tiny header">Eye Color: {{$character['eye_color']}}</div>
-                <div class="ui yellow tiny header">Birth Year: {{$character['birth_year']}}</div>
-                <div class="ui yellow tiny header">Gender: {{$character['gender']}}</div>
+                <div class="ui yellow tiny header">Height: {{$character->height}}</div>
+                <div class="ui yellow tiny header">Mass: {{$character->mass}}</div>
+                <div class="ui yellow tiny header">Hair Color: {{$character->hair_color}}</div>
+                <div class="ui yellow tiny header">Skin Color: {{$character->skin_color}}</div>
+                <div class="ui yellow tiny header">Eye Color: {{$character->eye_color}}</div>
+                <div class="ui yellow tiny header">Birth Year: {{$character->birth_year}}</div>
+                <div class="ui yellow tiny header">Gender: {{$character->gender}}</div>
             </span>
           </div>
           @endforeach
