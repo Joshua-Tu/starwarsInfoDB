@@ -4,6 +4,16 @@ Route::get('/','FilmsController@index');
 
 Route::get('/film/{id}', 'FilmsController@show');
 
-Route::get('/getFilms', 'FilmsController@getFilms');
+Route::get('/getFilms', 'FetchData@getFilms');
 
-Route::get('/getCharacters', 'FilmsController@getCharacters');
+Route::get('/getCharacters', 'FetchData@getCharacters');
+
+Route::get('/getPlanets', 'FetchData@getPlanets');
+
+Route::get('/getVehicles', 'FetchData@getVehicles');
+
+Route::get('/getStarships', 'FetchData@getStarships');
+
+Route::get('/getSpecies', 'FetchData@getSpecies');
+
+

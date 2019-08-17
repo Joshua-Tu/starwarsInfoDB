@@ -6,7 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Character extends Model
-{
+{   
+    use SoftDeletes;
+
     protected $primaryKey = 'character_url';
     
     protected $fillable = [

@@ -3,9 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Film extends Model
 {
+    use SoftDeletes;
+
     protected $fillable = ['episode_id',
                            'film_url',
                            'title',
@@ -16,4 +19,5 @@ class Film extends Model
                            'favourited'                                      
     ];
 
+    protected $dates = ['deleted_at'];
 }
