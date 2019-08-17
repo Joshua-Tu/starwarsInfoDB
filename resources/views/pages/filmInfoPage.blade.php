@@ -45,24 +45,24 @@
     </div>
 
 
-    {{-- <div>
+    <div>
       <br />
       <h2 class="ui red dividing huge header">Planets:</h2>
       <br/>
       @foreach($planets as $planet)
           <div class="ui container tooltip">
-            <h2 class="ui violet medium header">{{$planet['name']}}</h2>
+            <h2 class="ui violet medium header">{{$planet->name}}</h2>
             <span class="tooltiptext"> 
-              <div class="ui yellow tiny header">Rotation Period: {{$planet['rotation_period']}}</div>
-              <div class="ui yellow tiny header">Orbital Period: {{$planet['orbital_period']}}</div>
-              <div class="ui yellow tiny header">Diameter: {{$planet['diameter']}}</div>
-              <div class="ui yellow tiny header">Climate: {{$planet['climate']}}</div>
-              <div class="ui yellow tiny header">Gravity: {{$planet['gravity']}}</div>
-              <div class="ui yellow tiny header">Terrain: {{$planet['terrain']}}</div>
-              <div class="ui yellow tiny header">Gravity: {{$planet['gravity']}}</div>
-              <div class="ui yellow tiny header">Surface Water: {{$planet['surface_water']}}</div>
-              <div class="ui yellow tiny header">Gravity: {{$planet['gravity']}}</div> 
-              <div class="ui yellow tiny header">Population: {{$planet['population']}}</div>
+              <div class="ui yellow tiny header">Rotation Period: {{$planet->rotation_period}}</div>
+              <div class="ui yellow tiny header">Orbital Period: {{$planet->orbital_period}}</div>
+              <div class="ui yellow tiny header">Diameter: {{$planet->diameter}}</div>
+              <div class="ui yellow tiny header">Climate: {{$planet->climate}}</div>
+              <div class="ui yellow tiny header">Gravity: {{$planet->gravity}}</div>
+              <div class="ui yellow tiny header">Terrain: {{$planet->terrain}}</div>
+              <div class="ui yellow tiny header">Gravity: {{$planet->gravity}}</div>
+              <div class="ui yellow tiny header">Surface Water: {{$planet->surface_water}}</div>
+              <div class="ui yellow tiny header">Gravity: {{$planet->gravity}}</div> 
+              <div class="ui yellow tiny header">Population: {{$planet->population}}</div>
             </span>
           </div>
       @endforeach  
@@ -73,22 +73,22 @@
       <br/>
       <h2 class="ui red dividing huge header">Species:</h2>
       <br/>
-          @foreach($species as $specy)
+          @foreach($species as $spec)
             <div class="ui container tooltip">
-              <h2 class="ui violet medium header">{{$specy['name']}}</h2>
+              <h2 class="ui violet medium header">{{$spec->name}}</h2>
               <span class="tooltiptext">
-                  <div class="ui yellow tiny header">Classification: {{$specy['classification']}}</div>
-                  <div class="ui yellow tiny header">Designation: {{$specy['designation']}}</div>
-                  <div class="ui yellow tiny header">Average Height: {{$specy['average_height']}}</div>
-                  <div class="ui yellow tiny header">Skin Colors: {{$specy['skin_colors']}}</div>
-                  <div class="ui yellow tiny header">Hair Colors: {{$specy['hair_colors']}}</div>
-                  <div class="ui yellow tiny header">Eye Colors: {{$specy['eye_colors']}}</div>
-                  <div class="ui yellow tiny header">Average Lifespan: {{$specy['average_lifespan']}}</div>
-                  <div class="ui yellow tiny header">Language: {{$specy['language']}}</div>
+                  <div class="ui yellow tiny header">Classification: {{$spec->classification}}</div>
+                  <div class="ui yellow tiny header">Designation: {{$spec->designation}}</div>
+                  <div class="ui yellow tiny header">Average Height: {{$spec->average_height}}</div>
+                  <div class="ui yellow tiny header">Skin Colors: {{$spec->skin_colors}}</div>
+                  <div class="ui yellow tiny header">Hair Colors: {{$spec->hair_colors}}</div>
+                  <div class="ui yellow tiny header">Eye Colors: {{$spec->eye_colors}}</div>
+                  <div class="ui yellow tiny header">Average Lifespan: {{$spec->average_lifespan}}</div>
+                  <div class="ui yellow tiny header">Language: {{$spec->language}}</div>
               </span>
             </div>
           @endforeach  
-    </div> --}}
+    </div>
 
 
     {{-- <div>
@@ -97,7 +97,7 @@
         <br/>
             @foreach($starships as $starship)
               <div class="ui container tooltip">
-                <h2 class="ui violet medium header">{{$starship['name']}}</h2>
+                <h2 class="ui violet medium header">{{$starship->name']}}</h2>
                 <span class="tooltiptext">
                     <div class="ui yellow tiny header">Model: {{$starship['model']}}</div>
                     <div class="ui yellow tiny header">Manufacturer: {{$starship['manufacturer']}}</div>
@@ -138,6 +138,6 @@
                 </div>
               @endforeach  
         </div> --}}
-@endsection   {{-- @endsection means @stop  --}} 
+@endsection
 
 

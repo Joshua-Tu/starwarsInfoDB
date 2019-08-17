@@ -31,8 +31,8 @@ class FetchData extends Controller {
         Film::find((int) $film['episode_id'])->characters()->sync($film['characters']);
         Film::find((int) $film['episode_id'])->planets()->sync($film['planets']);
         Film::find((int) $film['episode_id'])->species()->sync($film['species']);
-        // Film::find((int) $film['episode_id'])->starships()->sync($film['starships']);
-        // Film::find((int) $film['episode_id'])->vehicles()->sync($film['vehicles']);
+        Film::find((int) $film['episode_id'])->starships()->sync($film['starships']);
+        Film::find((int) $film['episode_id'])->vehicles()->sync($film['vehicles']);
       }
     }
 

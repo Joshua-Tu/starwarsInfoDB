@@ -26,10 +26,10 @@ class Film extends Model
     }
 
     public function planets() {
-        return $this->belongToMany('App\Planet', 'film_planet', 'film_id', 'planet_url');
+        return $this->belongsToMany('App\Planet', 'film_planet', 'film_id', 'planet_url');
     }
 
     public function species() {
-        return $this->belongToMany('App\Species', 'film_species', 'film_id', 'species_url');
+        return $this->belongsToMany('App\Species', 'film_species', 'film_id', 'species_url');
     }
 }

@@ -26,29 +26,18 @@ class FilmsController extends Controller
         if(in_array($id, $filmEpiIdArr)){
             $film = $films->find($id);
             $characters = $film->characters;
-            // $planets = array_map(function ($planetUrl) {
-            //     return (array) GetRemoteData::getInfo($planetUrl);
-            //   }, $filmData['planets']);
-           
-            // $species = array_map(function ($specyUrl) {
-            //     return (array) GetRemoteData::getInfo($specyUrl);
-            //   }, $filmData['species']);
-
-            // $starships = array_map(function ($starshipUrl) {
-            //         return (array) GetRemoteData::getInfo($starshipUrl);
-            //       }, $filmData['starships']);
-
-            // $vehicles = array_map(function ($vehicleUrl) {
-            //     return (array) GetRemoteData::getInfo($vehicleUrl);
-            //   }, $filmData['vehicles']);
+            $planets = $film->planets;
+            $species = $film->species;
+            $species = $film->starships;
+            $species = $film->vehicles;
             
             return view('pages.filmInfoPage',compact(
                 'film',
-                'characters'
-                // 'planets',
-                // 'species',
-                // 'starships',
-                // 'vehicles'
+                'characters',
+                'planets',
+                'species',
+                'starships',
+                'vehicles'
             ));
         } else {
             echo '<h1>Page not found</h1>';
