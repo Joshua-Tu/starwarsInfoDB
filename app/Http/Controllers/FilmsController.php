@@ -7,17 +7,12 @@ use Illuminate\Http\Request;
 use App\Film;
 use App\Character;
 use App\Planet;
+use App\Vehicle;
+use App\Starship;
+use App\Species;
 
 class FilmsController extends Controller
 {
-          // $this->starships = array_values(array_sort(GetSingleTypeData::get('starships'), function ($value) {
-          //   return $value['name'];
-          // }));
-
-          // $this->species = array_values(array_sort(GetSingleTypeData::get('species'), function ($value) {
-          //   return $value['name'];
-          // }));
-
     public function index() {           
         $films = Film::all();
         return view('pages.homepage',compact('films'));

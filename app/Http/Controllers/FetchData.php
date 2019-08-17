@@ -8,6 +8,8 @@ use App\Film;
 use App\Character;
 use App\Planet;
 use App\Vehicle;
+use App\Starship;
+use App\Species;
 
 class FetchData extends Controller {
 
@@ -73,6 +75,31 @@ class FetchData extends Controller {
           }          
     }
 
+    public function getStarships() {
+      $starships = array_values(array_sort(GetSingleTypeData::get('starships'), function ($value) {
+        return $value['name'];
+      }));
+
+      foreach($starships as $starship) {
+        Starship::create([
+          'starship_url' => $starship['url'],
+          'name' => $starship['name'],
+          'model' => $starship['model'],
+          'starship_class' => $starship['starship_class'],
+          'cost_in_credits' => $starship['cost_in_credits'],
+          'manufacturer' => $starship['manufacturer'],
+          'length' => $starship['length'],
+          'crew' => $starship['crew'],
+          'passengers' => $starship['passengers'],
+          'max_atmosphering_speed' => $starship['max_atmosphering_speed'],
+          'hyperdrive_rating' => $starship['hyperdrive_rating'],
+          'MGLT' => $starship['MGLT'],
+          'cargo_capacity' => $starship['cargo_capacity'],
+          'consumables' => $starship['consumables'],
+        ]);
+      }  
+    }
+
     public function getVehicles() {
       $vehicles = array_values(array_sort(GetSingleTypeData::get('vehicles'), function ($value) {
         return $value['name'];
@@ -80,17 +107,41 @@ class FetchData extends Controller {
 
       foreach($vehicles as $vehicle) {
         Vehicle::create([
-          'planet_url' => $planet['url'],
-          'name' => $planet['name'],
-          'diameter' => $planet['diameter'],
-          'rotation_period' => $planet['rotation_period'],
-          'orbital_period' => $planet['orbital_period'],
-          'gravity' => $planet['gravity'],
-          'population' => $planet['population'],
-          'climate' => $planet['climate'],
-          'terrain' => $planet['terrain'],
-          'surface_water' => $planet['surface_water']
+          'vehicle_url' => $vehicle['url'],
+          'name' => $vehicle['name'],
+          'model' => $vehicle['model'],
+          'vehicle_class' => $vehicle['vehicle_class'],
+          'manufacturer' => $vehicle['manufacturer'],
+          'length' => $vehicle['length'],
+          'cost_in_credits' => $vehicle['cost_in_credits'],
+          'crew' => $vehicle['crew'],
+          'passengers' => $vehicle['passengers'],
+          'max_atmosphering_speed' => $vehicle['max_atmosphering_speed'],
+          'cargo_capacity' => $vehicle['cargo_capacity'],
+          'consumables' => $vehicle['consumables'],
         ]);
       }          
+    }
+
+    public function getSpecies() {
+      $species = array_values(array_sort(GetSingleTypeData::get('species'), function ($value) {
+        return $value['name'];
+      }));
+
+      foreach($species as $spec) {
+        Species::create([
+          'species_url' => $spec['url'],
+          'name' => $spec['name'],
+          'classification' => $spec['classification'],
+          'designation' => $spec['designation'],
+          'average_height' => $spec['average_height'],
+          'average_lifespan' => $spec['average_lifespan'],
+          'eye_colors' => $spec['eye_colors'],
+          'hair_colors' => $spec['hair_colors'],
+          'skin_colors' => $spec['skin_colors'],
+          'language' => $spec['language'],
+          // 'homeworld' => $spec['homeworld']  //homeworld is an array of url, sometimes the data has null here, I didn't set this column to nullable in the create_species migration file, so I create a migration file to remove this column
+        ]);
+      }  
     }
 }

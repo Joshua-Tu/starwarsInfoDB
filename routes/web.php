@@ -10,9 +10,9 @@ Route::get('/getCharacters', 'FetchData@getCharacters');
 
 Route::get('/getPlanets', 'FetchData@getPlanets');
 
-Route::get('/getVehicles', 'FetchData@getVehicles');
-
 Route::get('/getStarships', 'FetchData@getStarships');
+
+Route::get('/getVehicles', 'FetchData@getVehicles');
 
 Route::get('/getSpecies', 'FetchData@getSpecies');
 
