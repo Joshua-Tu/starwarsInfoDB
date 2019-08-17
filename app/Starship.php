@@ -28,4 +28,8 @@ class Starship extends Model
     ];
 
     protected $dates = ['deleted_at'];
+
+    public function films() {
+        return $this->belongsToMany('App\Film', 'film_starship', 'starship_url', 'film_id');
+    }
 }

@@ -25,4 +25,8 @@ class Vehicle extends Model
         'consumables'
     ];
     protected $dates = ['deleted_at'];
+
+    public function films() {
+        return $this->belongsToMany('App\Film', 'film_vehicle', 'vehicle_url', 'film_id');
+    }
 }

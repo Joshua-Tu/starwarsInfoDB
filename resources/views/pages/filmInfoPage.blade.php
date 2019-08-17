@@ -91,26 +91,26 @@
     </div>
 
 
-    {{-- <div>
+    <div>
         <br/>
         <h2 class="ui red dividing huge header">Starships:</h2>
         <br/>
             @foreach($starships as $starship)
               <div class="ui container tooltip">
-                <h2 class="ui violet medium header">{{$starship->name']}}</h2>
+                <h2 class="ui violet medium header">{{$starship->name}}</h2>
                 <span class="tooltiptext">
-                    <div class="ui yellow tiny header">Model: {{$starship['model']}}</div>
-                    <div class="ui yellow tiny header">Manufacturer: {{$starship['manufacturer']}}</div>
-                    <div class="ui yellow tiny header">Cost In Credits: {{$starship['cost_in_credits']}}</div>
-                    <div class="ui yellow tiny header">Length: {{$starship['length']}}</div>
-                    <div class="ui yellow tiny header">Max Speed: {{$starship['max_atmosphering_speed']}}</div>
-                    <div class="ui yellow tiny header">Crew: {{$starship['crew']}}</div>
-                    <div class="ui yellow tiny header">Passengers: {{$starship['passengers']}}</div>
-                    <div class="ui yellow tiny header">Cargo Capacity: {{$starship['cargo_capacity']}}</div>
-                    <div class="ui yellow tiny header">Consumables: {{$starship['consumables']}}</div>
-                    <div class="ui yellow tiny header">Hyperdrive Rating: {{$starship['hyperdrive_rating']}}</div>
-                    <div class="ui yellow tiny header">MGLT: {{$starship['MGLT']}}</div>
-                    <div class="ui yellow tiny header">Starship Class: {{$starship['starship_class']}}</div>
+                    <div class="ui yellow tiny header">Model: {{$starship->model}}</div>
+                    <div class="ui yellow tiny header">Manufacturer: {{$starship->manufacturer}}</div>
+                    <div class="ui yellow tiny header">Cost In Credits: {{$starship->cost_in_credits}}</div>
+                    <div class="ui yellow tiny header">Length: {{$starship->length}}</div>
+                    <div class="ui yellow tiny header">Max Speed: {{$starship->max_atmosphering_speed}}</div>
+                    <div class="ui yellow tiny header">Crew: {{$starship->crew}}</div>
+                    <div class="ui yellow tiny header">Passengers: {{$starship->passengers}}</div>
+                    <div class="ui yellow tiny header">Cargo Capacity: {{$starship->cargo_capacity}}</div>
+                    <div class="ui yellow tiny header">Consumables: {{$starship->consumables}}</div>
+                    <div class="ui yellow tiny header">Hyperdrive Rating: {{$starship->hyperdrive_rating}}</div>
+                    <div class="ui yellow tiny header">MGLT: {{$starship->MGLT}}</div>
+                    <div class="ui yellow tiny header">Starship Class: {{$starship->starship_class}}</div>
                 </span>
               </div>
             @endforeach  
@@ -122,22 +122,22 @@
           <br/>
               @foreach($vehicles as $vehicle)
                 <div class="ui container tooltip">
-                  <h2 class="ui violet medium header">{{$vehicle['name']}}</h2>
+                  <h2 class="ui violet medium header">{{$vehicle->name}}</h2>
                   <span class="tooltiptext">
-                      <div class="ui yellow tiny header">Model: {{$vehicle['model']}}</div>
-                      <div class="ui yellow tiny header">Manufacturer: {{$vehicle['manufacturer']}}</div>
-                      <div class="ui yellow tiny header">Cost In Credits: {{$vehicle['cost_in_credits']}}</div>
-                      <div class="ui yellow tiny header">Length: {{$vehicle['length']}}</div>
-                      <div class="ui yellow tiny header">Max Speed: {{$vehicle['max_atmosphering_speed']}}</div>
-                      <div class="ui yellow tiny header">Crew: {{$vehicle['crew']}}</div>
-                      <div class="ui yellow tiny header">Passengers: {{$vehicle['passengers']}}</div>
-                      <div class="ui yellow tiny header">Cargo Capacity: {{$vehicle['cargo_capacity']}}</div>
-                      <div class="ui yellow tiny header">Consumables: {{$vehicle['consumables']}}</div>
-                      <div class="ui yellow tiny header">Vehicle Class: {{$vehicle['vehicle_class']}}</div>
+                      <div class="ui yellow tiny header">Model: {{$vehicle->model}}</div>
+                      <div class="ui yellow tiny header">Manufacturer: {{$vehicle->manufacturer}}</div>
+                      <div class="ui yellow tiny header">Cost In Credits: {{$vehicle->cost_in_credits}}</div>
+                      <div class="ui yellow tiny header">Length: {{$vehicle->length}}</div>
+                      <div class="ui yellow tiny header">Max Speed: {{$vehicle->max_atmosphering_speed}}</div>
+                      <div class="ui yellow tiny header">Crew: {{$vehicle->crew}}</div>
+                      <div class="ui yellow tiny header">Passengers: {{$vehicle->passengers}}</div>
+                      <div class="ui yellow tiny header">Cargo Capacity: {{$vehicle->cargo_capacity}}</div>
+                      <div class="ui yellow tiny header">Consumables: {{$vehicle->consumables}}</div>
+                      <div class="ui yellow tiny header">Vehicle Class: {{$vehicle->vehicle_class}}</div>
                   </span>
                 </div>
               @endforeach  
-        </div> --}}
+        </div>
 @endsection
 
 

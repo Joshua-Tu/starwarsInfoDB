@@ -32,4 +32,12 @@ class Film extends Model
     public function species() {
         return $this->belongsToMany('App\Species', 'film_species', 'film_id', 'species_url');
     }
+
+    public function starships() {
+        return $this->belongsToMany('App\Starship', 'film_starship', 'film_id', 'starship_url');
+    }
+
+    public function vehicles() {
+        return $this->belongsToMany('App\Vehicle', 'film_vehicle', 'film_id', 'vehicle_url');
+    }
 }

@@ -28,8 +28,8 @@ class FilmsController extends Controller
             $characters = $film->characters;
             $planets = $film->planets;
             $species = $film->species;
-            $species = $film->starships;
-            $species = $film->vehicles;
+            $starships = $film->starships;
+            $vehicles = $film->vehicles;
             
             return view('pages.filmInfoPage',compact(
                 'film',
