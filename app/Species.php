@@ -28,6 +28,10 @@ class Species extends Model
 
     protected $dates = ['deleted_at'];
 
+    public function films() {
+        $this->belongsToMany('App\Film', 'film_species', 'species_url', 'film_id');
+    }
+
 }
 
 

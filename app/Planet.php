@@ -24,4 +24,8 @@ class Planet extends Model
         'surface_water'
     ];
     protected $dates = ['deleted_at'];
+
+    public function films() {
+        return $this->belongsToMany('App\Film', 'film_planet', 'planet_url', 'film_id');
+    }
 }
