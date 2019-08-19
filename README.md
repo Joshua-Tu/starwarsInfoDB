@@ -4,7 +4,7 @@
 
 ## Website
 
-**http://starwarsinfodb.test/ **
+http://starwarsinfodb.test/ (to be replaced by public url)
 
 --------
 
@@ -12,7 +12,7 @@
 
 ## Github
 
-**https://github.com/Joshua-Tu/starwarsInfoDB **
+https://github.com/Joshua-Tu/starwarsInfoDB
 
 -------
 
@@ -46,7 +46,7 @@
 
 ### Section 1. About the application
 
-####Section 1.1 About Star Wars Info
+#### Section 1.1 About Star Wars Info
 
 This application fetches data from https://swapi.co/ and stores it into MySQL database. Users visiting this application can search for the general information about the Star Wars movies ( Episode 1 to 7 ) and all the related information about characters, planets, species, starships and vehicles.
 
@@ -84,7 +84,7 @@ This application fetches data from https://swapi.co/ and stores it into MySQL da
 
 #### Section 2.2 Framework and structure
 
-**Fetch remote data **
+** Fetch remote data **
 
 > app
 >
