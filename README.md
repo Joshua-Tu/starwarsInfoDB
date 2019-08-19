@@ -160,7 +160,7 @@ This application fetches data from https://swapi.co/ and stores it into MySQL da
 
 #### Section 3.1 Wireframes
 
-![Wireframes](/Users/josh.tu/Documents/Internship/Work Diary/WireFrames/StarWarsInfo_wireframing.png)
+![Wireframes](https://github.com/Joshua-Tu/starwarsInfoDB/blob/master/StarWarsInfo_wireframing.png?raw=true)
 
 ---
 
@@ -168,7 +168,7 @@ This application fetches data from https://swapi.co/ and stores it into MySQL da
 
 The relatinship between films and other tables of other models is all many-to-many. The primary key (PK) of films table is its id, the PKs of characters, planets, species, vehicles and starships tables are all their urls. The pivot tables contains film id and the respective model urls. Films connect to other model tables through pivot tables.
 
-![ERD](/Users/josh.tu/Documents/Internship/Work Diary/WireFrames/ERD.png)
+![ERD](https://github.com/Joshua-Tu/starwarsInfoDB/blob/master/ERD.png?raw=true)
 
 ----
 
