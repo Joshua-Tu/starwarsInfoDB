@@ -84,7 +84,7 @@ This application fetches data from https://swapi.co/ and stores it into MySQL da
 
 #### Section 2.2 Framework and structure
 
-** Fetch remote data **
+**Fetch remote data**
 
 > app
 >
